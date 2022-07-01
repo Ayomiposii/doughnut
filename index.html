@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Doughnut 🍩</title>
+    <style>
+       body{
+        margin: 0;
+        background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+       }
+       h1{
+        text-align: center;
+        color: blueviolet;
+       }
+       h2{
+        text-align: center;
+        border: 3px solid blueviolet;
+        padding: 20px;
+        margin: 10px 40px ;
+        border-radius: 4px;
+       }
+       img{
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+        border-radius: 7px;
+        
+       }
+       p {
+        line-height: 1.5;
+        font-size: 15px;
+        padding: 20px 0 20px;
+        margin: 20px 20px 20px 35px ;
+       }
+       button{
+        display: block;
+        margin: 25px auto;
+        background: blueviolet;
+        color: white;
+        font-size: 20px;
+        padding: 15px 10px 15px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+       }
+       button:hover{
+        opacity: 0.9;
+        cursor: pointer;
+       }
+       hr {
+        max-width: 630px;
+        margin: 10px auto;
+        color: blueviolet;
+       }
+       span {
+        color: rgba(137, 43, 226, 0.768);
+       }
+       @media (max-width:750px) {
+           .container{
+            max-width: 300px;
+           } 
+       }
+       .container{
+        max-width: 600px;
+        margin: 70px auto;
+        padding: 30px 60px;
+        border: 2px solid white;
+        border-radius: 35px;
+        background-color: white;
+        
+       }
+       .learn_more {
+        display: block;
+        margin: 0px 40px;
+        text-decoration: none;
+       }
+       .learn_more:hover{
+        text-decoration: underline;
+        color: blueviolet;
+       }
+       .footer{
+        text-align: center;
+        font-family: sans-serif;
+       }
+       .footer_link {
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 17px;   
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>I love Doughnut </h1>
+    <h2>Especially Chocolate Donut</h2>
+    <img src="choco_donut1.jpg" 
+    alt="chocolate Donut"
+    >
+    <hr>
+    <p>
+        <strong>A doughnut or donut</strong> is a type of food made from leavened fried dough.
+        It is popular in many countries and is prepared in various forms as a 
+        sweet snack that can be homemade or purchased in <span> bakeries</span>,<span> supermarkets</span>, 
+        <span>food stalls</span>, and <span> franchised specialty vendors</span>.<em> Doughnut</em> is the traditional spelling,
+        while donut is the simplified version; the terms are often used interchangeably.
+    </p>
+
+    <a href="https://en.wikipedia.org/wiki/Doughnut" 
+    target="_blank"
+    class="learn_more">
+       Learn more on wikipedia
+    </a>
+
+    <br>
+
+    <button class="buy_button">
+       👉 Buy Chocolate Doughnut
+    </button>
+
+    <p class="footer">
+    This page was built by
+    <a href="https://github.com/Ayomiposii" class="footer_link">
+        Ayomiposi
+    </a>
+    </p>
+    </div>
+
+    <script>
+        function doughnut() {
+            let donut = prompt("Do you like doughnuts(Yes or No)?");
+            donut = donut.toLowerCase();
+            
+            if (donut === "yes") {
+                alert("High Five 🖐");
+            } else if (donut === "no") {
+                alert("You are missing out 😟");
+            } else {
+                alert("I said Yes or No 😒");
+            }
+             
+            }
+
+        function buy() {
+            let name = prompt("What is your name?");
+            doughnut();
+
+            let email = prompt("What is your email address?");
+            let emoji = prompt("What is your favorite emoji?");
+           
+            alert(
+                `Thank you, ${name}!  We'll be in touch by email, meanwhile have lot of doughnut! ${emoji} 😁😊`
+            );
+            
+        }
+        let buyButton = document.querySelector(".buy_button");
+        buyButton.addEventListener("click", buy);
+    </script>
+</body>
+</html>
